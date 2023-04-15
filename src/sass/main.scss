@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+/* font */
+$fontFam: 'Hanken Grotesk',
+sans-serif;
+
+/* primary colors */
+$Light-red        : hsl(0, 100%, 67%);
+$Light-red-al     : hsla(0, 100%, 67%, 0.05);
+$Green-teal       : hsl(166, 100%, 37%);
+$Green-teal-al    : hsla(166, 100%, 37%, 0.05);
+$Cobalt-blue      : hsl(234, 85%, 45%);
+$Cobalt-blue-al   : hsla(234, 85%, 45%, 0.05);
+$Orangey-yellow   : hsl(39, 100%, 56%);
+$Orangey-yellow-al: hsla(39, 100%, 56%, 0.07);
+
+/* gradients */
+/* circle score */
+$Violet-blue     : hsla(256, 72%, 46%, 1);
+$Persian-blue    : hsla(241, 72%, 46%, 0);
+/* background score side*/
+$Light-slate-blue: hsl(252, 100%, 67%);
+$Light-royal-blue: hsl(241, 81%, 54%);
+
+/* neutral colors */
+$White         : hsl(0, 0%, 100%);
+$Pale-blue     : hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+
+    body {
+        font-size  : 18px;
+        min-height : 100vh;
+        font-family: $fontFam;
+
+        .card {
+            .card__result-side {
+                gap                       : 1.45em;
+                color                     : $White;
+                display                   : flex;
+                padding                   : 20px 64px 40px 64px;
+                text-align                : center;
+                align-items               : center;
+                flex-direction            : column;
+                justify-content           : space-between;
+                background-image          : linear-gradient(to bottom, $Light-slate-blue, $Light-royal-blue);
+                border-bottom-left-radius : 28px;
+                border-bottom-right-radius: 28px;
+
+                p {
+                    font-size: 1.2rem;
+                }
+
+                h1 {
+                    font-size: 3.5rem;
+                }
+
+                span,
+                p {
+                    color: $Light-lavender;
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1rem;
+                }
+
+                .result__score {
+                    width           : 150px;
+                    height          : 150px;
+                    display         : flex;
+                    align-items     : center;
+                    border-radius   : 50%;
+                    justify-content : center;
+                    background-image: linear-gradient(to bottom, $Violet-blue, $Persian-blue);
+                }
+
+                .result__info {
+                    gap           : .8rem;
+                    display       : flex;
+                    flex-direction: column;
+                }
+            }
+
+            .card__summary-side {
+                gap           : 1em;
+                padding       : 1.8em;
+                display       : flex;
+                flex-direction: column;
+
+                .summary__items {
+                    gap           : 1em;
+                    display       : flex;
+                    list-style    : none;
+                    flex-direction: column;
+
+                    .item {
+                        display        : flex;
+                        padding        : 1em;
+                        justify-content: space-between;
+                        border-radius  : 8px;
+
+                        .item__type {
+                            gap    : 1rem;
+                            display: flex;
+                        }
+
+                        .item__score {
+                            gap        : .4rem;
+                            color      : hsla(0, 0, 0, 0.4);
+                            display    : flex;
+                            font-weight: 700;
+                        }
+                    }
+
+                    .reaction {
+                        color           : $Light-red;
+                        background-color: $Light-red-al;
+                    }
+
+                    .memory {
+                        color           : $Orangey-yellow;
+                        background-color: $Orangey-yellow-al;
+                    }
+
+                    .verbal {
+                        color           : $Green-teal;
+                        background-color: $Green-teal-al;
+                    }
+
+                    .visual {
+                        color           : $Cobalt-blue;
+                        background-color: $Cobalt-blue-al;
+                    }
+                }
+
+                b {
+                    color: $Dark-gray-blue;
+                }
+
+                button {
+                    color           : $White;
+                    cursor          : pointer;
+                    border          : none;
+                    padding         : 1em;
+                    font-size       : 1.1rem;
+                    font-weight     : 600;
+                    border-radius   : 30px;
+                    background-color: $Dark-gray-blue;
+
+                    &:active {
+                        background-color: $Cobalt-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* desktop media query*/
+
+@media screen and (min-width: 768px) {
+
+    body {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        .card {
+            width                     : 700px;
+            margin                    : 0 auto;
+            display                   : flex;
+            box-shadow: 12px 28px 36px -5px rgba(17,37,212,0.13);
+            -webkit-box-shadow: 12px 28px 36px -5px rgba(17,37,212,0.13);
+            -moz-box-shadow: 12px 28px 36px -5px rgba(17,37,212,0.13);
+            border-top-right-radius   : 28px;
+            border-bottom-right-radius: 28px;
+
+            .card__result-side {
+                width          : 50%;
+                border-radius  : 28px;
+                justify-content: space-evenly;
+            }
+
+            .card__summary-side {
+                width                     : 50%;
+                padding                   : 2.5em;
+                border-top-right-radius   : 28px;
+                border-bottom-right-radius: 28px;
+            }
+        }
+    }
+}

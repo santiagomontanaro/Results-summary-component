@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="stylesheet" href="./src/sass/main.css">
+</head>
+
+<body>
+
+  <main class="card">
+    <!-- result side -->
+    <div class="card__result-side">
+      <p>Your Result</p>
+      <div class="result__score">
+        <div class="score__num">
+          <h1>76</h1>
+          <span>of 100</span>
+        </div>
+      </div>
+      <div class="result__info">
+        <h3>Great</h3>
+        <span>You scored higher than 65% of the people who have taken these tests.</span>
+      </div>
+    </div>
+    <!-- summary side -->
+    <div class="card__summary-side">
+      <b>Summary</b>
+      <ul class="summary__items">
+        <li class="item reaction">
+          <div class="item__type"><img src="./src/images/icon-reaction.svg" alt="svg-item"><span>Reaction</span></div>
+          <div class="item__score"><b>80</b>/<span>100</span></div>
+        </li>
+        <li class="item memory">
+          <div class="item__type"><img src="./src/images/icon-memory.svg" alt="svg-item"><span>Memory</span></div>
+          <div class="item__score"><b>92</b>/<span>100</span></div>
+        </li>
+        <li class="item verbal">
+          <div class="item__type"><img src="./src/images/icon-verbal.svg" alt="svg-item"><span>Verbal</span></div>
+          <div class="item__score"><b>61</b>/<span>100</span></div>
+        </li>
+        <li class="item visual">
+          <div class="item__type"><img src="./src/images/icon-visual.svg" alt="svg-item"><span>Visual</span></div>
+          <div class="item__score"><b>72</b>/<span>100</span></div>
+        </li>
+      </ul>
+      <button>Continue</button>
+    </div>
+  </main>
+
+</body>
+
+</html>
